@@ -13,7 +13,7 @@ kubectl exec < pod-name > -it -n todoapp -- sh
 Run this commands inside the shell
 
 ```bash
-SERVICEACCOUNT=/var/run/secrets/kubernetes.io/serviceaccount
+CACERT=${SERVICEACCOUNT}/ca.crt
 ```
 ```bash
 TOKEN=$(cat ${SERVICEACCOUNT}/token)
